@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css?family=Manrope:200,400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  text-transform: none;
+  font-weight: 200;
+}
+
+body {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 1.2;
+  color: #fafafa;
+  overflow: hidden;
+}
+.home {
+  background: linear-gradient(
+      to right,
+      rgb(26, 26, 26, 0.9) 0%,
+      rgb(26, 26, 26, 0.7) 30%,
+      rgb(26, 26, 26, 0.5) 60%,
+      rgb(26, 26, 26, 0) 100%
+    ),
+    url("./assets/sydney.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.tokyo {
+  background: linear-gradient(
+      to right,
+      rgb(26, 26, 26, 0.9) 0%,
+      rgb(26, 26, 26, 0.7) 30%,
+      rgb(26, 26, 26, 0.5) 60%,
+      rgb(26, 26, 26, 0) 100%
+    ),
+    url("./assets/tokyo.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.newyork {
+  background: linear-gradient(
+      to right,
+      rgb(26, 26, 26, 0.9) 0%,
+      rgb(26, 26, 26, 0.7) 30%,
+      rgb(26, 26, 26, 0.5) 60%,
+      rgb(26, 26, 26, 0) 100%
+    ),
+    url("./assets/newyork.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.paris {
+  background: linear-gradient(
+      to right,
+      rgb(26, 26, 26, 0.9) 0%,
+      rgb(26, 26, 26, 0.7) 30%,
+      rgb(26, 26, 26, 0.5) 60%,
+      rgb(26, 26, 26, 0) 100%
+    ),
+    url("./assets/paris.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.honolulu {
+  background: linear-gradient(
+      to right,
+      rgb(26, 26, 26, 0.9) 0%,
+      rgb(26, 26, 26, 0.7) 30%,
+      rgb(26, 26, 26, 0.5) 60%,
+      rgb(26, 26, 26, 0) 100%
+    ),
+    url("./assets/honolulu.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.cairo {
+  background: linear-gradient(
+      to right,
+      rgb(26, 26, 26, 0.9) 0%,
+      rgb(26, 26, 26, 0.7) 30%,
+      rgb(26, 26, 26, 0.5) 60%,
+      rgb(26, 26, 26, 0) 100%
+    ),
+    url("./assets/cairo.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+/* icons */
+.fas,
+.far {
+  cursor: pointer;
+}
+i {
+  color: snow;
+  opacity: 0.8;
+  transition: opacity 1s;
+}
+i:hover {
+  opacity: 1;
+}
+
+/* loading overlay */
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: lightsalmon;
+  color: #1a1a1a;
+  z-index: 2;
+  font-size: 3rem;
+}
+
+.blur {
+  filter: blur(6px);
+}
+
+/* layout */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 100vh;
+  padding: 3rem;
+  transition: all 0.5s;
+  font-size: 3rem;
+}
+
+.weather-temp {
+  font-size: 10rem;
+  line-height: 10rem;
+}
+.weather-description {
+  margin: 0 0 2rem 0;
+}
+.weather-timezone {
+  text-transform: uppercase;
+  opacity: 0.75;
+  letter-spacing: 10px;
+}
+/* format api */
+.weather-description::first-letter {
+  text-transform: uppercase;
+}
+.weather-temp::after {
+  content: "\2103";
+  color: lightsalmon;
+  vertical-align: top;
+}
+
+/* menu slider */
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 15vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3rem;
+  transform: translateX(100%);
+  background: #1a1a1a;
+  box-shadow: -2px 1px 12px 1px rgba(26, 26, 26, 0.3);
+  color: snow;
+  font-size: 1.5rem;
+}
+
+.menu button {
+  color: snow;
+  /* text-shadow: #2c2c2c 1.5px 2px 1.5px; */
+  text-align: right;
+  cursor: pointer;
+  padding: 1rem 0;
+  line-height: 1.1;
+  opacity: 1;
+  transition: all 0.3s ease-in;
+}
+.menu button.active {
+  opacity: 0.25;
+  cursor: default;
+}
+.menu button::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 2rem;
+  color: coral;
+  opacity: 0;
+  content: "\f0da"; /* f105 */
+  transition: all 1s 0.2s ease;
+}
+.menu button:hover:before {
+  opacity: 0.5;
+}
+/* menu icon - open and close */
+.menu-icon {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  color: snow;
+  font-size: 3rem;
+  z-index: 1;
+}
+.menu-open {
+  animation: menuOpen 1s forwards;
+}
+.menu-close {
+  animation: menuClose 1s forwards;
+}
+
+/* slide animations */
+
+.slide-in {
+  animation: slideIn 1s ease forwards;
+}
+.slide-out {
+  animation: slideOut 1s ease forwards;
+}
+.start-load {
+  animation: startLoad 1s ease forwards;
+}
+.end-load {
+  animation: endLoad 1s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* loading snimation */
+@keyframes startLoad {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes endLoad {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+/* menu spinner animation */
+@keyframes menuOpen {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes menuClose {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* responsive */
+@media screen and (max-width: 1408px) {
+  .menu {
+    width: 20vw;
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 1216px) {
+  .menu {
+    width: 40vw;
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    width: 100vw;
+    font-size: 3rem;
+  }
+}
