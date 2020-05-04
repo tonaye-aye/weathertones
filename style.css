@@ -40,6 +40,7 @@ body {
     url("./assets/sydney.jpg");
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .tokyo {
   background: linear-gradient(
