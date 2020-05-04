@@ -323,4 +323,7 @@ i:hover {
     width: 100vw;
     font-size: 3rem;
   }
+  .weather-temp {
+    font-size: 4rem;
+  }
 }
