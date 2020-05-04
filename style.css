@@ -154,9 +154,6 @@ i:hover {
   font-size: 10rem;
   line-height: 10rem;
 }
-.weather-description {
-  margin: 0 0 2rem 0;
-}
 .weather-timezone {
   text-transform: uppercase;
   opacity: 0.75;
@@ -325,5 +322,8 @@ i:hover {
   }
   .weather-temp {
     font-size: 4rem;
+  }
+  .owf-3x {
+    font-size: 1em;
   }
 }
