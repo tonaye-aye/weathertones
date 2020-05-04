@@ -27,46 +27,47 @@
     <title>Weather</title>
   </head>
   <body class="home">
-    <!--loading overlay-->
-    <!-- <div class="loading">
+    <div class="app">
+      <!--loading overlay-->
+      <!-- <div class="loading">
       <div class="animated infinite pulse">loading . . .</div>
     </div> -->
 
-    <!--main section-->
-    <div class="section">
-      <div class="weather-container">
-        <!--temp-->
-        <div class="weather-temp">
-          20
-        </div>
-        <!--description-->
-        <div class="weather-description">
-          clear sky
+      <!--main section-->
+      <div class="section">
+        <div class="weather-container">
+          <!--temp-->
+          <div class="weather-temp">
+            20
+          </div>
+          <!--description-->
+          <div class="weather-description">
+            clear sky
+          </div>
+
+          <!--icon-->
+          <div class="weather-icon">
+            <i class="owf owf-3x"></i>
+          </div>
         </div>
 
-        <!--icon-->
-        <div class="weather-icon">
-          <i class="owf owf-3x"></i>
-        </div>
+        <!--timezone/city-->
+        <div class="weather-timezone">Timezone/City</div>
       </div>
 
-      <!--timezone/city-->
-      <div class="weather-timezone">Timezone/City</div>
+      <!--menu icon-->
+      <i class="menu-icon fas fa-chevron-left"></i>
+
+      <!--slide-->
+      <div class="menu">
+        <button id="home" class="active">Home</button>
+        <button id="tokyo">Tokyo</button>
+        <button id="newyork">New York</button>
+        <button id="paris">Paris</button>
+        <button id="honolulu">Honolulu</button>
+        <button id="cairo">Cairo</button>
+      </div>
     </div>
-
-    <!--menu icon-->
-    <i class="menu-icon fas fa-chevron-left"></i>
-
-    <!--slide-->
-    <div class="menu">
-      <button id="home" class="active">Home</button>
-      <button id="tokyo">Tokyo</button>
-      <button id="newyork">New York</button>
-      <button id="paris">Paris</button>
-      <button id="honolulu">Honolulu</button>
-      <button id="cairo">Cairo</button>
-    </div>
-
     <!--app-->
     <script src="./app.js"></script>
   </body>
