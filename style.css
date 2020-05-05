@@ -17,23 +17,17 @@ button {
   text-transform: none;
   font-weight: 200;
 }
-html {
-  height: 100%;
-}
+
 body {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   font-family: "Manrope", sans-serif;
   font-size: 12px;
   font-weight: 200;
   line-height: 1.2;
   color: #fafafa;
   overflow: hidden;
-}
-.app {
-  width: 100%;
-  height: 100%;
 }
 .home {
   background: linear-gradient(
@@ -46,7 +40,6 @@ body {
     url("./assets/sydney.jpg");
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 .tokyo {
   background: linear-gradient(
@@ -132,7 +125,7 @@ i:hover {
   flex-direction: column;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: lightsalmon;
   color: #1a1a1a;
   z-index: 2;
@@ -151,7 +144,7 @@ i:hover {
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 3rem;
   transition: all 0.5s;
   font-size: 3rem;
