@@ -149,7 +149,8 @@ i:hover {
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  height: 100%;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
   padding: 3rem;
   transition: all 0.5s;
   font-size: 3rem;
