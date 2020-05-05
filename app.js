@@ -156,6 +156,9 @@ const app = () => {
   window.addEventListener("resize", () => {
     getHeight();
   });
+  window.ontouchend = (e) => {
+    e.preventDefault();
+  };
 };
 
 app();
