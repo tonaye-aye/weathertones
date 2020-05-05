@@ -139,7 +139,6 @@ const currentLocation = () => {
 };
 
 const getHeight = () => {
-  // We execute the same script as before
   let vh = window.innerHeight * 0.01;
   document.section.style.setProperty("--vh", `${vh}px`);
 };
@@ -148,17 +147,15 @@ const getHeight = () => {
 const app = () => {
   window.addEventListener("load", () => {
     console.log("I love Ashley the most <3");
-    getHeight();
     currentLocation();
     menuSlider();
     menuNavigation();
-  });
-  window.addEventListener("resize", () => {
     getHeight();
   });
-  window.ontouchend = (e) => {
-    e.preventDefault();
-  };
+  window.addEventListener("resize", () => {
+    let vh = window.innerHeight * 0.01;
+    document.section.style.setProperty("--vh", `${vh}px`);
+  });
 };
 
 app();
