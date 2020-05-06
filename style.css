@@ -217,6 +217,14 @@ i:hover {
   opacity: 0;
   content: "\f0da"; /* f105 */
   transition: all 1s 0.2s ease;
+
+  /* remove blue highlighting on mobile */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .menu button:hover:before {
   opacity: 0.5;
@@ -327,8 +335,8 @@ i:hover {
     font-size: 3rem;
   }
   .weather-temp {
-    font-size: 6rem;
-    line-height: 6rem;
+    font-size: 5rem;
+    line-height: 5rem;
   }
   .weather-description {
     font-size: 2rem;
