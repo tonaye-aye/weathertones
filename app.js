@@ -102,7 +102,6 @@ const fetchWeather = (lat, long) => {
 
       let cutTimezone = data.timezone.split("/").pop();
       weatherTimezone.textContent = cutTimezone.replace(/_/g, " ");
-      //weatherTimezone.textContent = data.timezone.split("/").pop();
 
       // create fresh icons
       const iconId = id;
