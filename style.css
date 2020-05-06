@@ -337,12 +337,12 @@ i:hover {
     padding: 1.5rem;
   }
   .weather-temp {
-    font-size: 5rem;
-    line-height: 4rem;
+    font-size: 7rem;
+    line-height: 5.4rem;
   }
   .weather-description {
     font-size: 2rem;
-    margin: 1rem 0 3rem;
+    margin: 1.5rem 0 0;
   }
   .weather-timezone {
     font-size: 1rem;
