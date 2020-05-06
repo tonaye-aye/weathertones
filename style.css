@@ -203,6 +203,14 @@ i:hover {
   opacity: 1;
   transition: all 0.3s ease-in;
   font-size: 1.5rem;
+
+  /* remove blue highlighting on mobile */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .menu button.active {
   opacity: 0.25;
@@ -217,14 +225,6 @@ i:hover {
   opacity: 0;
   content: "\f0da"; /* f105 */
   transition: all 1s 0.2s ease;
-
-  /* remove blue highlighting on mobile */
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 .menu button:hover:before {
   opacity: 0.5;
@@ -342,7 +342,7 @@ i:hover {
   }
   .weather-description {
     font-size: 2rem;
-    margin: 1.5rem 0 0;
+    margin: 1.5rem 0;
   }
   .weather-timezone {
     font-size: 1rem;
