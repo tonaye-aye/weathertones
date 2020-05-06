@@ -60,7 +60,7 @@ const menuNavigation = () => {
       let city = link.innerHTML.replace(/\s/g, "").toLowerCase();
 
       // change background image
-      // body.className = city;
+      body.className = city;
 
       // choose coordinates
       if (city === "home") {
