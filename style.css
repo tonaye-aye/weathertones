@@ -328,6 +328,7 @@ i:hover {
   }
   .weather-temp {
     font-size: 4rem;
+    line-height: 4rem;
   }
   .weather-timezone {
     font-size: 1.5rem;
