@@ -331,7 +331,7 @@ i:hover {
 
 @media screen and (max-width: 768px) {
   .menu {
-    width: 100vw;
+    width: 60vw;
     font-size: 3rem;
   }
   .weather-temp {
