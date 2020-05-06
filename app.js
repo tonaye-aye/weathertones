@@ -140,7 +140,7 @@ const currentLocation = () => {
 
 const getHeight = () => {
   let vh = window.innerHeight * 0.01;
-  document.section.style.setProperty("--vh", `${vh}px`);
+  section.style.setProperty("--vh", `${vh}px`);
 };
 
 // app
@@ -154,7 +154,7 @@ const app = () => {
   });
   window.addEventListener("resize", () => {
     let vh = window.innerHeight * 0.01;
-    document.section.style.setProperty("--vh", `${vh}px`);
+    section.style.setProperty("--vh", `${vh}px`);
   });
 };
 
