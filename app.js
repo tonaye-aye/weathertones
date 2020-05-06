@@ -141,6 +141,7 @@ const currentLocation = () => {
 const getHeight = () => {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);
+  console.log("get height: done");
 };
 
 // app
