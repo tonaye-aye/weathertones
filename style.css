@@ -327,14 +327,14 @@ i:hover {
     font-size: 3rem;
   }
   .weather-temp {
-    font-size: 4rem;
-    line-height: 4rem;
+    font-size: 6rem;
+    line-height: 6rem;
+  }
+  .weather-description {
+    font-size: 2rem;
   }
   .weather-timezone {
     font-size: 1rem;
-  }
-  .owf-3x {
-    font-size: 2em;
   }
   .menu-icon {
     font-size: 2rem;
