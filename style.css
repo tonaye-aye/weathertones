@@ -331,9 +331,12 @@ i:hover {
     line-height: 4rem;
   }
   .weather-timezone {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .owf-3x {
     font-size: 1em;
+  }
+  .menu-icon {
+    font-size: 2rem;
   }
 }
