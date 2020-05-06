@@ -196,7 +196,6 @@ i:hover {
 
 .menu button {
   color: snow;
-  /* text-shadow: #2c2c2c 1.5px 2px 1.5px; */
   text-align: right;
   cursor: pointer;
   padding: 1rem 0;
@@ -338,5 +337,8 @@ i:hover {
   }
   .menu-icon {
     font-size: 2rem;
+  }
+  .menu {
+    font-size: 1rem;
   }
 }
