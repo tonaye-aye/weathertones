@@ -134,6 +134,8 @@ const currentLocation = () => {
       fetchWeather(lat, long);
       body.className = "home";
     });
+  } else {
+    fetchWeather("-33.865143", "151.209900");
   }
 };
 
