@@ -4,6 +4,7 @@ const loadingOverlay = document.querySelector(".loading");
 // menu variables
 const menuLinks = document.querySelectorAll(".menu button");
 const menuSection = document.querySelector(".menu");
+const menuIconContainer = document.querySelector(".menu-icon-container");
 const menuIcon = document.querySelector(".menu-icon");
 
 // create containers for weather elements
@@ -28,7 +29,7 @@ const closeMenu = () => {
 
 // menu slider
 const menuSlider = () => {
-  menuIcon.addEventListener("click", () => {
+  menuIconContainer.addEventListener("click", () => {
     if (menuSection.classList.contains("slide-in")) {
       closeMenu();
     } else {

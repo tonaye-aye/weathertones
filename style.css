@@ -230,13 +230,16 @@ i:hover {
   opacity: 0.5;
 }
 /* menu icon - open and close */
-.menu-icon {
+.menu-icon-container {
   position: absolute;
-  top: 3rem;
-  right: 3rem;
+  top: 1rem;
+  right: 1rem;
+  padding: 2rem;
+  z-index: 1;
+}
+.menu-icon {
   color: snow;
   font-size: 3rem;
-  z-index: 1;
 }
 .menu-open {
   animation: menuOpen 1s forwards;
@@ -330,13 +333,12 @@ i:hover {
 }
 
 @media screen and (max-width: 768px) {
-  .menu {
-    width: 60vw;
-    font-size: 3rem;
+  .section {
+    padding: 1.5rem;
   }
   .weather-temp {
     font-size: 5rem;
-    line-height: 5rem;
+    line-height: 4rem;
   }
   .weather-description {
     font-size: 2rem;
@@ -344,6 +346,15 @@ i:hover {
   }
   .weather-timezone {
     font-size: 1rem;
+  }
+  .menu-icon-container {
+    top: 0;
+    right: 0;
+    padding: 1.5rem;
+  }
+  .menu {
+    width: 60vw;
+    font-size: 3rem;
   }
   .menu-icon {
     font-size: 2rem;
