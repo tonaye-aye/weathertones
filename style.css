@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
+  font-family: "Manrope", sans-serif;
 }
 
 button {
@@ -26,7 +27,6 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
-  font-family: "Manrope", sans-serif;
   font-size: 12px;
   font-weight: 200;
   line-height: 1.2;
@@ -34,79 +34,6 @@ body {
   overflow: hidden;
   background: #313131;
 }
-.home {
-  background: linear-gradient(
-      to right,
-      rgb(26, 26, 26, 0.9) 0%,
-      rgb(26, 26, 26, 0.7) 30%,
-      rgb(26, 26, 26, 0.5) 60%,
-      rgb(26, 26, 26, 0) 100%
-    ),
-    url("./assets/sydney.jpg");
-  background-position: center;
-  background-size: cover;
-}
-.tokyo {
-  background: linear-gradient(
-      to right,
-      rgb(26, 26, 26, 0.9) 0%,
-      rgb(26, 26, 26, 0.7) 30%,
-      rgb(26, 26, 26, 0.5) 60%,
-      rgb(26, 26, 26, 0) 100%
-    ),
-    url("./assets/tokyo.jpg");
-  background-position: center;
-  background-size: cover;
-}
-.newyork {
-  background: linear-gradient(
-      to right,
-      rgb(26, 26, 26, 0.9) 0%,
-      rgb(26, 26, 26, 0.7) 30%,
-      rgb(26, 26, 26, 0.5) 60%,
-      rgb(26, 26, 26, 0) 100%
-    ),
-    url("./assets/newyork.jpg");
-  background-position: center;
-  background-size: cover;
-}
-.paris {
-  background: linear-gradient(
-      to right,
-      rgb(26, 26, 26, 0.9) 0%,
-      rgb(26, 26, 26, 0.7) 30%,
-      rgb(26, 26, 26, 0.5) 60%,
-      rgb(26, 26, 26, 0) 100%
-    ),
-    url("./assets/paris.jpg");
-  background-position: center;
-  background-size: cover;
-}
-.honolulu {
-  background: linear-gradient(
-      to right,
-      rgb(26, 26, 26, 0.9) 0%,
-      rgb(26, 26, 26, 0.7) 30%,
-      rgb(26, 26, 26, 0.5) 60%,
-      rgb(26, 26, 26, 0) 100%
-    ),
-    url("./assets/honolulu.jpg");
-  background-position: center;
-  background-size: cover;
-}
-.cairo {
-  background: linear-gradient(
-      to right,
-      rgb(26, 26, 26, 0.9) 0%,
-      rgb(26, 26, 26, 0.7) 30%,
-      rgb(26, 26, 26, 0.5) 60%,
-      rgb(26, 26, 26, 0) 100%
-    ),
-    url("./assets/cairo.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
 /* icons */
 .fas,
 .far {
@@ -151,28 +78,43 @@ i:hover {
   width: 100%;
   height: 100vh; /* Fallback for browsers that do not support Custom Properties */
   height: calc(var(--vh, 1vh) * 100);
-  padding: 3rem;
   transition: all 0.5s;
   font-size: 3rem;
+}
+
+.weather-container {
+  padding: 3rem;
 }
 
 .weather-temp {
   font-size: 10rem;
   line-height: 10rem;
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
-.weather-timezone {
-  text-transform: uppercase;
-  opacity: 0.75;
-  letter-spacing: 10px;
-}
-/* format api */
-.weather-description::first-letter {
-  text-transform: uppercase;
-}
-.weather-temp::after {
+.celcius::after {
   content: "\2103";
   color: lightsalmon;
   vertical-align: top;
+}
+.farenheit::after {
+  content: "\2109";
+  color: lightsalmon;
+  vertical-align: top;
+}
+.weather-description {
+  margin: 0.5rem 0;
+}
+.weather-description::first-letter {
+  text-transform: uppercase;
+}
+.weather-timezone {
+  padding: 3rem;
+  text-transform: uppercase;
+  opacity: 0.75;
+  letter-spacing: 10px;
 }
 
 /* menu slider */
@@ -330,10 +272,18 @@ i:hover {
     width: 40vw;
     font-size: 2.5rem;
   }
+  article {
+    width: 2100px;
+    right: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .section {
+  article {
+    width: 1400px;
+    right: 0;
+  }
+  .weather-container {
     padding: 1.5rem;
   }
   .weather-temp {
@@ -342,10 +292,10 @@ i:hover {
   }
   .weather-description {
     font-size: 2rem;
-    margin: 1.5rem 0;
   }
   .weather-timezone {
     font-size: 1rem;
+    padding: 1.5rem;
   }
   .menu-icon-container {
     top: 0;

@@ -60,7 +60,7 @@ const menuNavigation = () => {
       let city = link.innerHTML.replace(/\s/g, "").toLowerCase();
 
       // change background image
-      body.className = city;
+      // body.className = city;
 
       // choose coordinates
       if (city === "home") {
@@ -133,7 +133,7 @@ const currentLocation = () => {
       lat = position.coords.latitude;
 
       fetchWeather(lat, long);
-      body.className = "home";
+      // body.className = "home";
     });
   } else {
     fetchWeather("-33.865143", "151.209900");
@@ -144,6 +144,20 @@ const getHeight = () => {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);
   console.log("get height: done");
+};
+
+const calculateFarenheit = () => {
+  let celcius = weatherTemp.innerHTML.replace(/\s/g, "").toLowerCase();
+  let fahrenheit = Math.round(celcius * (9 / 5) + 32);
+  weatherTemp.textContent = fahrenheit;
+  weatherTemp.className = "weather-temp farenheit";
+};
+
+const calculateCelcius = () => {
+  let farenheit = weatherTemp.innerHTML.replace(/\s/g, "").toLowerCase();
+  let celcius = Math.round((farenheit - 32) * (5 / 9));
+  weatherTemp.textContent = celcius;
+  weatherTemp.className = "weather-temp celcius";
 };
 
 // app
@@ -158,6 +172,13 @@ const app = () => {
   window.addEventListener("resize", () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
+  });
+  weatherTemp.addEventListener("click", () => {
+    if (weatherTemp.classList.contains("celcius")) {
+      calculateFarenheit();
+    } else {
+      calculateCelcius();
+    }
   });
 };
 
