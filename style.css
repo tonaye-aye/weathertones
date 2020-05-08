@@ -93,6 +93,7 @@ i:hover {
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .celcius::after {
   content: "\2103";
@@ -292,6 +293,7 @@ i:hover {
   }
   .weather-description {
     font-size: 2rem;
+    margin: 1.5rem 0;
   }
   .weather-timezone {
     font-size: 1rem;
