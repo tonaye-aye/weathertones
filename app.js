@@ -135,7 +135,7 @@ const fetchWeather = (lat, long) => {
     })
     .then(() => {
       console.log("Finished fetching API");
-      // loadingOverlay.classList.add("end-load");
+      loadingOverlay.classList.add("end-load");
     });
 };
 

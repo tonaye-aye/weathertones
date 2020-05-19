@@ -1,12 +1,7 @@
 /* VECTOR IMAGES */
 
 svg {
-  z-index: -1;
-  position: absolute;
-  bottom: 3rem;
-  right: 3rem;
-  width: 30vw;
-  height: auto;
+  width: 300px;
 }
 .st0 {
   fill: none;
