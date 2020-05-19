@@ -1,104 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Manrope:200,400,700&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  font-family: "Manrope", sans-serif;
-}
-
-html {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  font-size: 12px;
-  font-weight: 200;
-  line-height: 1.2;
-  color: #fafafa;
-  overflow: hidden;
-  background: #313131;
-}
-
-button {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  font-size: 100%;
-  text-transform: none;
-  font-weight: 200;
-}
-
-svg {
-  z-index: -1;
-  position: absolute;
-  bottom: 3rem;
-  right: 3rem;
-  width: 30vw;
-  height: auto;
-}
-.st0 {
-  fill: none;
-  stroke: none;
-}
-.st1 {
-  fill: none;
-  stroke: snow;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
-}
-.harbour {
-  fill: none;
-  stroke: snow;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
-}
-.harbour-fill {
-  fill: rgba(255, 250, 250, 0.1);
-  stroke: snow;
-  stroke-width: 0.75;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
-}
-.eiffel,
-.liberty,
-.temple,
-.colosseum,
-.opera {
-  fill: rgba(255, 250, 250, 0.1);
-  stroke: none;
-}
-.pyramids {
-  fill: rgba(255, 250, 250, 0.1);
-  stroke: snow;
-}
-.hide {
-  display: none;
-}
-
-/* icons */
-.fas,
-.far {
-  cursor: pointer;
-}
-i {
-  color: snow;
-  opacity: 0.8;
-  transition: opacity 1s;
-}
-i:hover {
-  opacity: 1;
-}
-
 /* loading overlay */
 
 .loading {
@@ -114,59 +13,8 @@ i:hover {
   z-index: 2;
   font-size: 3rem;
 }
-
 .blur {
   filter: blur(6px);
-}
-
-/* layout */
-
-.section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
-  transition: all 0.5s;
-  font-size: 3rem;
-}
-
-.weather-container {
-  padding: 3rem;
-}
-
-.weather-temp {
-  font-size: 10rem;
-  line-height: 10rem;
-  cursor: pointer;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-}
-.celcius::after {
-  content: "\2103";
-  color: lightsalmon;
-  vertical-align: top;
-}
-.farenheit::after {
-  content: "\2109";
-  color: lightsalmon;
-  vertical-align: top;
-}
-.weather-description {
-  margin: 0.5rem 0;
-}
-.weather-description::first-letter {
-  text-transform: uppercase;
-}
-.weather-timezone {
-  padding: 3rem;
-  text-transform: uppercase;
-  opacity: 0.75;
-  letter-spacing: 10px;
 }
 
 /* menu slider */
@@ -257,6 +105,8 @@ i:hover {
   animation: endLoad 1s ease forwards;
 }
 
+/* Keyframes */
+
 @keyframes slideIn {
   from {
     transform: translateX(100%);
@@ -312,7 +162,7 @@ i:hover {
   }
 }
 
-/* responsive */
+/* Media queries */
 @media screen and (max-width: 1408px) {
   .menu {
     width: 20vw;
