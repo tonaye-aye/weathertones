@@ -8,17 +8,6 @@
   font-family: "Manrope", sans-serif;
 }
 
-button {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  font-size: 100%;
-  text-transform: none;
-  font-weight: 200;
-}
-
 html {
   height: 100%;
 }
@@ -34,6 +23,68 @@ body {
   overflow: hidden;
   background: #313131;
 }
+
+button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  text-transform: none;
+  font-weight: 200;
+}
+
+svg {
+  z-index: -1;
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  width: 30vw;
+  height: auto;
+}
+.st0 {
+  fill: none;
+  stroke: none;
+}
+.st1 {
+  fill: none;
+  stroke: snow;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+.harbour {
+  fill: none;
+  stroke: snow;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+.harbour-fill {
+  fill: rgba(255, 250, 250, 0.1);
+  stroke: snow;
+  stroke-width: 0.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+.eiffel,
+.liberty,
+.temple,
+.colosseum,
+.opera {
+  fill: rgba(255, 250, 250, 0.1);
+  stroke: none;
+}
+.pyramids {
+  fill: rgba(255, 250, 250, 0.1);
+  stroke: snow;
+}
+.hide {
+  display: none;
+}
+
 /* icons */
 .fas,
 .far {
@@ -280,6 +331,12 @@ i:hover {
 }
 
 @media screen and (max-width: 768px) {
+  svg {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 50vw;
+  }
+
   article {
     width: 1400px;
     right: 0;

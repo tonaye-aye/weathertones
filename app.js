@@ -13,6 +13,15 @@ const weatherTemp = document.querySelector(".weather-temp");
 const weatherTimezone = document.querySelector(".weather-timezone");
 const weatherIcon = document.querySelector("i");
 
+// vector images
+const allSVG = document.querySelectorAll("svg");
+const sydneySVG = document.querySelector("svg#sydney-svg");
+const tokyoSVG = document.querySelector("svg#tokyo-svg");
+const parisSVG = document.querySelector("svg#paris-svg");
+const cairoSVG = document.querySelector("svg#cairo-svg");
+const nySVG = document.querySelector("svg#newyork-svg");
+const romeSVG = document.querySelector("svg#rome-svg");
+
 // body
 const body = document.querySelector("body");
 const section = document.querySelector(".section");
@@ -56,24 +65,33 @@ const menuNavigation = () => {
       });
       link.classList.add("active");
 
+      // update vector hiden status
+      allSVG.forEach((item) => {
+        item.classList.add("hide");
+      });
+
       // pull out the city name - no spaces and lower case
       let city = link.innerHTML.replace(/\s/g, "").toLowerCase();
 
-      // change background image
-      // body.className = city;
-
       // choose coordinates
       if (city === "home") {
-        currentLocation();
+        //currentLocation(); //geolocation API
+        sydneySVG.classList.remove("hide");
+        fetchWeather("-33.865143", "151.209900");
       } else if (city === "tokyo") {
+        tokyoSVG.classList.remove("hide");
         fetchWeather("35.652832", "139.839478");
       } else if (city === "newyork") {
+        nySVG.classList.remove("hide");
         fetchWeather("40.73061", "-73.935242");
       } else if (city === "paris") {
+        parisSVG.classList.remove("hide");
         fetchWeather("48.864716", "2.349014");
-      } else if (city === "honolulu") {
-        fetchWeather("19.741755", "-155.844437");
+      } else if (city === "rome") {
+        romeSVG.classList.remove("hide");
+        fetchWeather("41.902782", "12.496366");
       } else if (city === "cairo") {
+        cairoSVG.classList.remove("hide");
         fetchWeather("30.033333", "31.233334");
       }
     });
@@ -91,6 +109,7 @@ const fetchWeather = (lat, long) => {
     })
     .then((data) => {
       // log API data
+      console.log("API Data:");
       console.log(data);
 
       // set DOM elements from api
@@ -106,7 +125,6 @@ const fetchWeather = (lat, long) => {
 
       // create fresh icons
       const iconId = id;
-      console.log(iconId);
       if (icon.includes("n")) {
         iconClass = `owf-${iconId}-n`;
         weatherIcon.className = `owf owf-3x ${iconClass}`;
@@ -116,7 +134,7 @@ const fetchWeather = (lat, long) => {
       }
     })
     .then(() => {
-      console.log("end");
+      console.log("Finished fetching API");
       // loadingOverlay.classList.add("end-load");
     });
 };
@@ -135,15 +153,12 @@ const currentLocation = () => {
       fetchWeather(lat, long);
       // body.className = "home";
     });
-  } else {
-    fetchWeather("-33.865143", "151.209900");
   }
 };
 
 const getHeight = () => {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);
-  console.log("get height: done");
 };
 
 const calculateFarenheit = () => {
