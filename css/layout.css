@@ -153,6 +153,7 @@ button {
   .menu {
     width: 60vw;
     font-size: 3rem;
+    padding: 1.5rem;
   }
   .menu-icon {
     font-size: 2rem;
