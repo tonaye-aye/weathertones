@@ -54,6 +54,11 @@ i {
   color: snow;
   opacity: 0.8;
   transition: opacity 1s;
+
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 i:hover {
   opacity: 1;
