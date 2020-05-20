@@ -8,6 +8,13 @@
   font-family: "Manrope", sans-serif;
 }
 
+*:focus {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
 html {
   height: 100%;
 }
@@ -62,10 +69,10 @@ button {
   font-size: 10rem;
   line-height: 10rem;
   cursor: pointer;
-  -moz-user-select: none;
+  /* -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent; */
 }
 .celcius::after {
   content: "\2103";
