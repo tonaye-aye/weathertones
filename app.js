@@ -179,7 +179,7 @@ const calculateCelcius = () => {
 const app = () => {
   window.addEventListener("load", () => {
     console.log("I love Ashley the most <3");
-    currentLocation();
+    fetchWeather("-33.865143", "151.209900"); //currentLocation();
     menuSlider();
     menuNavigation();
     getHeight();
