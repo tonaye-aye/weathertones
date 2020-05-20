@@ -91,6 +91,9 @@ button {
 
 /* Media queries */
 @media screen and (max-width: 1408px) {
+  svg {
+    width: 120px;
+  }
   .menu {
     width: 20vw;
     font-size: 2rem;
@@ -98,7 +101,7 @@ button {
 }
 @media screen and (max-width: 1216px) {
   svg {
-    width: 240px;
+    width: 120px;
   }
   .menu {
     width: 40vw;
@@ -115,7 +118,7 @@ button {
     font-size: 3rem;
   }
   svg {
-    width: 120px;
+    width: 100px;
   }
   article {
     width: 1400px;
